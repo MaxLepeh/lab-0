@@ -19,9 +19,9 @@ public class Stack<T> {
     }
 
     public void push(T a) throws Exception {
-        if (sp == 5) throw new Exception("Stack is full");
-        stackArray[sp] = a;
+        if (sp == 4) throw new Exception("Stack is full");
         sp++;
+        stackArray[sp] = a;
     }
 
     public T pop() {
@@ -42,6 +42,8 @@ public class Stack<T> {
         return (sp == maxSize - 1);
     }
 
+
+    
     public static void main(String[] args) {
         Stack<Integer> theStack = new Stack<Integer>();
         try {
